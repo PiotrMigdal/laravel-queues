@@ -20,7 +20,8 @@
 </ul>
 
 ## Basics
-my-project/app/Jobs/SendWelcomeEmail.php
+my-project/app/Jobs/SendWelcomeEmail.php<br>
+web.php uri: /sendWelcome
 <li>Dispatching jobs, $tries, $backoff, $timeout, $maxExceptions, retryUntil(), prioritizing</li>
 
 ## Workflows
