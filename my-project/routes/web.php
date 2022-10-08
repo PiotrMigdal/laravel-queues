@@ -112,3 +112,9 @@ Route::get('/lock', function () {
     \App\Jobs\Deploy::dispatch();
     return view('welcome');
 });
+
+// chain of batches
+Route::get('/unique', function () {
+    \App\Jobs\DeployUnique::dispatch();
+    return view('welcome');
+});

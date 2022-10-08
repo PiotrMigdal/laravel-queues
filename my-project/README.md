@@ -36,3 +36,14 @@ web.php uri: /sendWelcome
 <p>It can be useful if you write something to file or use SFTP, you don't want to put to many jobs at the same time</p>
 <p>You can use cache, funnel, throttle or method middleware()</p>
 <p>See Deploy.php</p>
+
+## Unique
+<p>If the job extends ShouldBeUnique class, it avoid creating multiple jobs of the same instance</p>
+<p>See DeployUnique and /unique route. You can trigger job many times but it will create only one record in jobs database table</p>
+<p>ShouldBeUnique - unique until finish processing</p>
+<p>ShouldBeUniqueUntilProcessing - unique until starts processing. So when current job starts, it can pick up another instance</p>
+
+## Throttle exception middleware
+<p>You can configure that when job fails 10 times in the row, it will stop reaching the instances</p>
+<p>Can be useful if we use third party service that is for example down.</p>
+<p>see SendBySFTP.php</p>

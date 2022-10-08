@@ -81,6 +81,7 @@ class Deploy implements ShouldQueue
     // Middleware is working like other mifflewars in laravel
     // In this case it is similar to Cache::lock. It will control that only one instance can be ran at the same time
     // And when it has ran, wait 10 s before another
+    // Only difference is that it won't lock the job but put all incoming jobs back to the queue
     public function middleware()
     {
         return [
