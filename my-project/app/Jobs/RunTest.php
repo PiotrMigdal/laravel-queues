@@ -9,7 +9,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class ProcessPayment implements ShouldQueue
+class RunTest implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -30,6 +30,6 @@ class ProcessPayment implements ShouldQueue
      */
     public function handle()
     {
-        //
+        throw new \Exception('failed');
     }
 }

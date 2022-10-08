@@ -16,7 +16,7 @@
 <ul>
 <li>Create jobs table: php artisan queue:table && php artisan migrate</li>
 <li>php artisan make:job SendWelcomeEmail</li>
-<li>Check .env if QUEUE_CONNECTION=database</li>
+<li>Check .env if QUEUE_CONNECTION=database</li> 
 </ul>
 
 ## Basics
@@ -25,4 +25,8 @@ web.php uri: /sendWelcome
 <li>Dispatching jobs, $tries, $backoff, $timeout, $maxExceptions, retryUntil(), prioritizing</li>
 
 ## Workflows
-
+<p>There are chains and batches</p>
+<p>For chains see web.php /chain /chain2 route</p>
+<p>For batches see /batches /batches2 in web.php. Batches require additional settings:</p>
+<li>- use Batchable in job, see PullRepo</li>
+<li>- create batches table php artisan queue:batches-table && php artisan migrate</li>
