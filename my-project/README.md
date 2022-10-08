@@ -30,3 +30,9 @@ web.php uri: /sendWelcome
 <p>For batches see /batches /batches2 in web.php. Batches require additional settings:</p>
 <li>- use Batchable in job, see PullRepo</li>
 <li>- create batches table php artisan queue:batches-table && php artisan migrate</li>
+
+## Controlling and limiting jobs
+<p>Sometimes you need control the worker to for example don't overuse resource.</p>
+<p>It can be useful if you write something to file or use SFTP, you don't want to put to many jobs at the same time</p>
+<p>You can use cache, funnel, throttle or method middleware()</p>
+<p>See Deploy.php</p>

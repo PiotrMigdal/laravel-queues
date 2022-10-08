@@ -106,3 +106,9 @@ Route::get('/chain2', function () {
     )->dispatch();
     return view('welcome');
 });
+
+// chain of batches
+Route::get('/lock', function () {
+    \App\Jobs\Deploy::dispatch();
+    return view('welcome');
+});
