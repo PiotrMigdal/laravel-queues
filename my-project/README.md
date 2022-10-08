@@ -47,3 +47,5 @@ web.php uri: /sendWelcome
 <p>You can configure that when job fails 10 times in the row, it will stop reaching the instances</p>
 <p>Can be useful if we use third party service that is for example down.</p>
 <p>see SendBySFTP.php</p>
+
+## 
